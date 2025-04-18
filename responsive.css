@@ -1,0 +1,172 @@
+@import "tailwindcss";
+@media (max-width: 768px) {
+    /* General adjustments */
+    body {
+        font-size: 16px;
+    }
+
+    /* Navbar */
+    nav {
+        padding: 1rem 0;
+    }
+    .nav-font {
+        font-size: 1.25rem;
+    }
+    .max-w-7xl {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Hero Section */
+    .hero-bg {
+        height: auto;
+        min-height: 80vh;
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+    }
+    .hero-bg .pt-40 {
+        padding-top: 4rem;
+    }
+    .hero-font {
+        font-size: 2.5rem;
+    }
+    .section-font {
+        font-size: 1rem;
+    }
+    .hero-bg p {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .ball {
+        width: 30px;
+        height: 30px;
+    }
+    .hero-bg a.px-8.py-4 {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Features Section */
+    #features {
+        padding: 3rem 0;
+    }
+    #features h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        padding-top: 1rem;
+    }
+    .grid-cols-1 {
+        gap: 1.5rem;
+    }
+    .bg-gray-700.p-6 {
+        padding: 1.5rem;
+    }
+    .bg-gray-700 h3 {
+        font-size: 1.5rem;
+    }
+    #features p.text-lg {
+        font-size: 1rem;
+    }
+
+    /* Download Section */
+    #download {
+        padding: 3rem 0;
+    }
+    #download h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        padding-top: 1rem;
+    }
+    #download p.text-xl {
+        font-size: 1rem;
+    }
+    #download p.text-lg {
+        font-size: 0.9rem;
+    }
+    .flex.space-x-6 {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .flex.space-x-6 a {
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+    }
+
+    /* Sign Up Section */
+    #signup {
+        padding: 3rem 0;
+    }
+    #signup h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    #signup p.text-xl {
+        font-size: 1rem;
+        max-width: 95%;
+    }
+    form.max-w-lg {
+        padding: 0 1rem;
+    }
+    form input, form select, form textarea {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+    form button {
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+    }
+
+    /* Contact Section */
+    #contact {
+        padding: 3rem 0;
+    }
+    #contact h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    #contact p.text-xl {
+        font-size: 1rem;
+    }
+    .flex.gap-8 {
+        gap: 1.5rem;
+        flex-direction: column;
+    }
+    .flex.gap-8 a {
+        font-size: 1rem;
+    }
+    #contact p.text-lg {
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 2rem 0;
+    }
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Very small screens (below 480px) */
+@media (max-width: 480px) {
+    .hero-font {
+        font-size: 2rem;
+    }
+    .hero-bg .pt-40 {
+        padding-top: 3rem;
+    }
+    .hero-bg p {
+        font-size: 0.9rem;
+    }
+    .ball {
+        width: 20px;
+        height: 20px;
+    }
+    #features h2, #download h2, #signup h2, #contact h2 {
+        font-size: 1.75rem;
+    }
+    .bg-gray-700 h3 {
+        font-size: 1.25rem;
+    }
+}

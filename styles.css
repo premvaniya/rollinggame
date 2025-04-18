@@ -1,0 +1,67 @@
+body {
+    background-color: #1a1a2e;
+    color: #ffd166;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+.hero-bg {
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.7)), url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.ball {
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle at 30% 30%, #00ffcc, #0066ff 70%);
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid #00d4ff;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.8), 0 0 40px rgba(0, 102, 255, 0.4);
+    animation: roll 6s infinite linear, pulse 2s infinite ease-in-out;
+}
+@keyframes roll {
+    0% { transform: translate(0vw, 0vh) rotate(0deg); }
+    25% { transform: translate(100vw, 25vh) rotate(90deg); }
+    50% { transform: translate(0vw, 50vh) rotate(180deg); }
+    75% { transform: translate(100vw, 75vh) rotate(270deg); }
+    100% { transform: translate(0vw, 0vh) rotate(360deg); }
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+.ball:nth-child(2) {
+    animation-delay: 1s, 0s;
+    animation-direction: reverse, normal;
+}
+.ball:nth-child(3) {
+    animation-delay: 2s, 0.5s;
+}
+.glow {
+    transition: all 0.3s ease;
+}
+.glow:hover {
+    box-shadow: 0 0 15px #ff6f61;
+}
+.micro-interaction {
+    transform: scale(1);
+    transition: transform 0.2s ease;
+}
+.micro-interaction:hover {
+    transform: scale(1.05);
+}
+html {
+    scroll-behavior: smooth;
+}
+.nav-font {
+    font-family: 'Joystix', monospace;
+}
+.hero-font {
+    font-family: 'VT323', monospace;
+}
+.section-font {
+    font-family: 'Pixelify Sans', sans-serif;
+}
