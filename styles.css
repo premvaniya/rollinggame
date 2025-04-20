@@ -4,12 +4,49 @@ body {
     font-family: 'Pixelify Sans', sans-serif;
 }
 .hero-bg {
-    background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.7)), url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==');
+    background: linear-gradient(135deg, rgba(10, 10, 30, 0.9), rgba(10, 10, 30, 0.7)), url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR4nGP4z8AARhgYGL4wMDAwAABN0Qv0K1Y0OAAAAABJRU5ErkJggg==');
     background-size: cover;
     background-position: center;
     height: 100vh;
     position: relative;
     overflow: hidden;
+    /* Starfield effect */
+    background-image: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.6) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.4) 2px, transparent 2px);
+    background-size: 100px 100px, 150px 150px, 200px 200px;
+    background-position: 0 0, 50px 50px, 100px 100px;
+}
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 20%;
+    left: 10%;
+    background: radial-gradient(circle, #ff4d4d 30%, #cc0000 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 77, 77, 0.5);
+    image-rendering: pixelated;
+    animation: float 12s infinite ease-in-out;
+}
+.hero-bg::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    bottom: 15%;
+    right: 15%;
+    background: radial-gradient(circle, #4da8ff 30%, #0033cc 70%);
+    border-radius: 50%;
+    box-shadow: 0 Floating Planet Animation
+    image-rendering: pixelated;
+    animation: float 10s infinite ease-in-out reverse;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
 }
 .ball {
     width: 50px;
